@@ -1,0 +1,14 @@
+<div [formGroup] = "form">
+    <input type = "text" class="form-control" formControlName="username">
+    <input type = "password" class="form-control" formControlName="password">
+    <button (click)="limpiar()" class="btn btn-primary">Limpiar</button>
+    <button (click)="login()" class="btn btn-primary">Inicio sesion</button>
+    <button (click)="setDefault()" class="btn btn-primary">Valores por defecto</button>
+
+    <input type = "number" class="form-control" formControlName="precio">
+
+    <label *ngIf="isMessage">Esta en el rango</label>
+    <button (click)="login2()" class="btn btn-primary">Inicio sesion2</button>
+</div>
+
+{{form.value | json}}

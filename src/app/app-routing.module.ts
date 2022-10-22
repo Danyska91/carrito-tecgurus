@@ -10,6 +10,7 @@ import { Capitulo5Component } from './pages/capitulo5/capitulo5.component';
 import { TecgurusComponent } from './pages/tecgurus/tecgurus.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { Capitulo6Component } from './components/capitulo6/capitulo6.component';
+import { Capitulo7Component } from './pages/capitulo7/capitulo7.component';
 
 const routes: Routes = [{
   path: '', component: TecgurusComponent,
@@ -32,6 +33,9 @@ const routes: Routes = [{
     path: 'capitulo5', component: Capitulo5Component
   }, {
     path: 'capitulo6', component: Capitulo6Component
+
+  },{
+    path: 'capitulo7', component: Capitulo7Component
 
   }]
 }, {

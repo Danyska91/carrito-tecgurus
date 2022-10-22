@@ -23,6 +23,8 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { Capitulo6Component } from './components/capitulo6/capitulo6.component';
 import { FormatoPipe } from './pipes/formato.pipe';
 import { BuscadorPipe } from './pipes/buscador.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Capitulo7Component } from './pages/capitulo7/capitulo7.component';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import { BuscadorPipe } from './pipes/buscador.pipe';
     ProductDetailsComponent,
     Capitulo6Component,
     FormatoPipe,
-    BuscadorPipe
+    BuscadorPipe,
+    Capitulo7Component
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
