@@ -1,0 +1,46 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { Capitulo3Component } from './pages/capitulo3/capitulo3.component';
+import { Capitulo4Component } from './pages/capitulo4/capitulo4.component';
+import { Capitulo2Component } from './pages/capitulo2/capitulo2.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { Capitulo5Component } from './pages/capitulo5/capitulo5.component';
+import { TecgurusComponent } from './pages/tecgurus/tecgurus.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { Capitulo6Component } from './components/capitulo6/capitulo6.component';
+
+const routes: Routes = [{
+  path: '', component: TecgurusComponent,
+  children: [{
+    path: '', redirectTo: 'profile', pathMatch: 'full'
+  },
+  {
+    path: 'profile', component: ProfileComponent
+  }, {
+    path: 'products', component: ProductsComponent
+  }, {
+    path: 'products/:id', component: ProductDetailsComponent
+  }, {
+    path: 'capitulo2', component: Capitulo2Component
+  }, {
+    path: 'capitulo3', component: Capitulo3Component
+  }, {
+    path: 'capitulo4', component: Capitulo4Component
+  }, {
+    path: 'capitulo5', component: Capitulo5Component
+  }, {
+    path: 'capitulo6', component: Capitulo6Component
+
+  }]
+}, {
+  path: 'login', component: LoginComponent
+}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

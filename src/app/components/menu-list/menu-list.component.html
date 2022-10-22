@@ -1,0 +1,12 @@
+<div class="sidebar-header">
+  <h3>TECGURUS</h3>
+  <hr>
+</div>
+<ul class="list-unstyled components">
+  <li *ngFor="let menu of menus">
+    <app-menu [title]="menu.title" [path]="menu.path"> </app-menu>
+  </li>
+</ul>
+<ul class="list-unstyled CTAs">
+  <li> <a class="btn btn-default">Cerrar</a> </li>
+</ul>
