@@ -11,6 +11,8 @@ import { TecgurusComponent } from './pages/tecgurus/tecgurus.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { Capitulo6Component } from './components/capitulo6/capitulo6.component';
 import { Capitulo7Component } from './pages/capitulo7/capitulo7.component';
+import { Capitulo8Component } from './pages/capitulo8/capitulo8.component';
+import { Capitulo9Component } from './pages/capitulo9/capitulo9.component';
 
 const routes: Routes = [{
   path: '', component: TecgurusComponent,
@@ -36,6 +38,12 @@ const routes: Routes = [{
 
   },{
     path: 'capitulo7', component: Capitulo7Component
+
+  },{
+    path: 'capitulo8', component: Capitulo8Component
+
+  },{
+    path: 'capitulo9', component: Capitulo9Component
 
   }]
 }, {

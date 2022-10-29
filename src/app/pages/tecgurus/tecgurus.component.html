@@ -19,6 +19,9 @@
         </div>
       </nav>
       <div class="content-wrapper">
+        <div *ngIf="alert.active" class="alert alert-{{alert.type}}" role="alert">
+        {{alert.message}}
+        </div>
         <router-outlet></router-outlet>
         <div class="line"></div>
       </div>

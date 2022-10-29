@@ -14,6 +14,12 @@ export class MenuListComponent implements OnInit {
   },{
     title:'Products', 
     path: 'products'
+  },{
+    title:'Capitulo 7', 
+    path: 'capitulo7'
+  },{
+    title:'Capitulo 8', 
+    path: 'capitulo8'
   }]
 
   constructor() { }

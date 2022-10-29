@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
+import { MyServiceService } from 'src/app/services/my-service.service';
 
 @Component({
   selector: 'app-capitulo7',
@@ -8,21 +9,34 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class Capitulo7Component implements OnInit {
 
+  contador : number = 0;
+
   isMessage : boolean = false;
   form: FormGroup = new FormGroup({
-    username: new FormControl(),
-    password: new FormControl(),
+    username: new FormControl("", [Validators.email, Validators.required]),
+    password: new FormControl("", [Validators.required]),
     precio: new FormControl(0.00)
   });
-  constructor() { }
+  constructor(private service:MyServiceService) { }
 
   ngOnInit(): void {
+
+
+    this.contador = this.service.contador;
+    this.service.contador++;
     this.form.valueChanges.subscribe(item =>{
       if(item.precio > 100 && item.precio < 200){
         this.isMessage= true;
       }else {
         this.isMessage = false;
       }
+    })
+    this.form.statusChanges.subscribe(value=>{
+      console.log(value);
+    })
+
+    this.form.get('username')?.statusChanges.subscribe(value=>{
+      console.log(value);
     })
   }
 

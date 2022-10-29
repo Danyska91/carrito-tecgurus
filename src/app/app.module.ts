@@ -25,6 +25,8 @@ import { FormatoPipe } from './pipes/formato.pipe';
 import { BuscadorPipe } from './pipes/buscador.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Capitulo7Component } from './pages/capitulo7/capitulo7.component';
+import { Capitulo9Component } from './pages/capitulo9/capitulo9.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,13 +51,16 @@ import { Capitulo7Component } from './pages/capitulo7/capitulo7.component';
     Capitulo6Component,
     FormatoPipe,
     BuscadorPipe,
-    Capitulo7Component
+    Capitulo7Component,
+    Capitulo9Component,
+
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
